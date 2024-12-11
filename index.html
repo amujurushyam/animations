@@ -5,32 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animations</title>
     <style>
-      @keyframes shyam {
-        from {
-          background-size: cover;
-          background-image: url("https://www.chrisfallows.com/wp-content/uploads/2022/06/Bob-Junior.jpg");
-          transform: scale(1, 1);
-        }
-        to {
-          background-size: cover;
-          background-image: url("./mb.jpg");
-          transform: scale(2, 2);
-        }
-      }
+      
       body {
         background-color: black;
         color: white;
       }
-      .div1 {
-        border: 2px solid;
-        margin: 100px auto;
-        height: 150px;
-        width: 250px;
+      
+      @keyframes shyam {
+        10% {
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEPmELu4BDwQ6I99A7bQ7qmBnNZuK2JlLoQ&s);
+        }
+
+        20% {
+          background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRndyyLa1FaXRSEFy6_s2rW9ba6DgFVAOoI_A&s);
+        }
+
+        30% {
+          background-image: url(https://pbs.twimg.com/media/DkJq1t8WwAA7N_I.jpg);
+        }
+
+        50% {
+          background-image: url(https://assets.gqindia.com/photos/627b6eb7dfc89f47b8f14d8d/16:9/w_2560%2Cc_limit/Mahesh%2520Babu.jpeg);
+        }
+
+        60% {
+          background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/Mahesh_Babu_latest_phto_1200x768.jpeg?size=1200:675);
+        }
+
+        80% {
+          background-image: url(https://static.toiimg.com/thumb/msid-103656989,width-1280,height-720,resizemode-4/103656989.jpg);
+        }
+
+        100% {
+          background-image: url(https://pbs.twimg.com/media/GSXakqHWQAA3PWX.jpg);
+        }
+      }
+      .div2 {
+        /* border: 2px solid; */
+        margin: 5px auto;
+        height: 70vh;
+        width: 80vw;
         animation-name: shyam;
-        animation-duration: 3s;
+        animation-duration: 10s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: ease-out;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
         display: flex;
         flex-wrap: wrap;
       }
@@ -41,10 +63,39 @@
         box-shadow: 1px 1px 10px 0px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
+      .div1 {
+        border: 2px solid white;
+        height: 125px;
+        width: 125px;
+        margin: 100px auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .div1:hover {
+        background-color: blueviolet;
+
+        border-radius: 25px;
+        transform: translate(125px, 125px);
+        transition-duration: 2s;
+        transition-delay: 1s;
+        transform: scale(2, 2);
+        transition-property: all;
+      }
+      h2 {
+        text-align: center;
+        border: 2px solid;
+        padding: 20px;
+        box-shadow: 1px 1px 10px 0px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
     </style>
   </head>
   <body>
+    <h2>Css - Transitions</h2>
+    <div class="div1">Full Stack Developer</div>
     <h2>Css - Animations</h2>
-    <div class="div1"></div>
+    <div class="div2"></div>
   </body>
 </html>
